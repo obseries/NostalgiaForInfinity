@@ -133,11 +133,18 @@ class NostalgiaForInfinityX(IStrategy):
     use_custom_stoploss = False
 
     # Optimal timeframe for the strategy.
-    timeframe = '5m'
+#    timeframe = '5m'
+#    res_timeframe = 'none'
+#    info_timeframe_1d = '1d'
+#    info_timeframe_1h = '1h'
+#    info_timeframe_15m = '15m'
+
+    timeframe = '1m'
     res_timeframe = 'none'
-    info_timeframe_1d = '1d'
-    info_timeframe_1h = '1h'
-    info_timeframe_15m = '15m'
+    info_timeframe_1d = '12h'
+    info_timeframe_1h = '30m'
+    info_timeframe_15m = '5m'
+
 
     # BTC informative
     has_BTC_base_tf = True
