@@ -2692,7 +2692,7 @@ class NostalgiaForInfinityX(IStrategy):
                 and (last_candle[f"sma_200_dec_20_{self.info_timeframe_1h}"])
                 and (last_candle['cmf'] < -0.0)
                 and (last_candle[f"btc_not_downtrend_{self.info_timeframe_1h}"] == False)
-                and (last_candle['btc_tpct_change_144_5m'] > 0.1)
+                and (last_candle[f"btc_tpct_change_144_{self.timeframe}"] > 0.1)
                 and (last_candle[f"hl_pct_change_48_{self.info_timeframe_1h}"] > 0.5)
                 and (last_candle['tpct_change_144'] > 0.25)
                 # temporary
@@ -11247,7 +11247,7 @@ class NostalgiaForInfinityX(IStrategy):
                         | (dataframe['close'] > (dataframe[f"sup1_{self.info_timeframe_1d}"] * 1.0))
                         | (dataframe['close'] < dataframe['ema_20'] * 0.928)
                         | (dataframe['close'] < dataframe['bb20_2_low'] * 0.992)
-                        | (dataframe['btc_tpct_change_144_5m'] < 0.02)
+                        | (dataframe[f"btc_tpct_change_144_{self.timeframe}"] < 0.02)
                     )
 
                 # Condition #14 - Semi swing. Strong uptrend. Local dip.
