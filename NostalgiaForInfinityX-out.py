@@ -141,7 +141,7 @@ class NostalgiaForInfinityX(IStrategy):
 
     timeframe = '1m'
     res_timeframe = 'none'
-    info_timeframe_1d = '12h'
+    info_timeframe_1d = '8h'
     info_timeframe_1h = '30m'
     info_timeframe_15m = '5m'
 
